@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./cadastro.js"></script>
+    <title>Cadastro de Animal-Uni-Goiás</title>
+</head>
+
+<body>
+    <header class="navegador_cabecalho">
+        <nav class="navegador">
+            <a class="navegador_link" href="./index.html">HOME</a>
+            <a class="navegador_link" href="./raça.html">CADASTRO DE RAÇA</a>
+        </nav>
+    </header>
+    <h1 class="titulo_raca">Cadastro de Raças</h1>
+    <main class="cadastro">
+
+
+        <article class="cadastro_raca">
+
+
+
+            <form action="get">
+                <div class="cadastro_raca_conteiner">
+                    <input class="text_raca" name="txtNome" type="text" id="raca" placeholder="Nome da Raça">
+
+
+                    <select name="txtRaca" class="raca_animais">
+                        <option value="Akita">Akita</option>
+                        <option value="Basset Hound">Basset Hound</option>
+                        <option value="Beagle Harrier">Beagle Harrier</option>
+                        <option value="Bull Terrier">Bull Terrier</option>
+                        <option value="Boxer">Boxer</option>
+                        <option value="Buldogue Francês">Buldogue Francês</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Dálmata" >Dálmata</option>
+                        <option value="Husky Siberiano">Husky Siberiano</option>
+                        <option value="Pug">Pug</option>
+                        <option value="Rottweiler">Rottweiler</option>
+                        <option value="ShihTzu" >ShihTzu</option>
+                        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                        <option value="Poodle">Poodle</option>                    
+                        <option value="Pastor Alemão" selected>Pastor Alemão</option>
+                    </select>
+
+                    <div class="sexo">
+                        <input type="radio" name="txtSexo" id="Macho" value="MACHO">
+                        <label for="html">Macho</label><br>
+                        <input type="radio" name="txtSexo" id="Femea" value="FEMEA">
+                        <label for="css">Fêmea</label><br>
+                    </div>
+
+
+
+                    <input class="btn_cadastrar" type="button" value="Cadastro" onclick="cadAnimal(txtNome.value, txtRaca.value, txtSexo.value)" />
+                </div>
+            </form>
+
+
+
+
+
+
+
+
+        </article>
+        <article id="racas_cadastradas" class="shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="racas_cadastradas_conteiner">
+
+                <table id="cadastro_animais">
+
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>NOME</td>
+                            <td>RAÇA</td>
+                            <td>SEXO</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </article>
+
+    </main>
+    <script src="./cadastro.js"></script>
+</body>
+
+</html>
